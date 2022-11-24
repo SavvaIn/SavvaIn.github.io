@@ -343,6 +343,10 @@ li {
   cursor: pointer;
 }
 
+.expand__btn::before {
+  content: url("/assets/images/expand.svg");
+}
+
 .expand__text {
   font-family: "TTLakes-Medium";
 }
