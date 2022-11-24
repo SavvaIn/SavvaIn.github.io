@@ -26,6 +26,11 @@ html {
   background-color: #f8f8f8;
 }
 
+.container {
+  max-width: 1120px;
+  margin: auto;
+}
+
 li {
   list-style-type: none;
 }
@@ -36,15 +41,8 @@ li {
   display: flex;
   height: 88px;
   background-color: #ffffff;
-  box-shadow: 0 1px 5px 6px rgb(199, 201, 201);
   border-bottom: 1px solid #d9fff5;
   justify-content: space-between;
-}
-
-@media (min-width: 768px) {
-  .header {
-    box-shadow: none;
-  }
 }
 
 @media (min-width: 1120px) {
@@ -163,7 +161,6 @@ li {
 @media (min-width: 1120px) {
   .title__buttons {
     display: flex;
-    margin-right: 32px;
   }
   .button.repair {
     display: flex;
@@ -174,7 +171,12 @@ li {
   }
   .repair__submit,
   .check-status__submit {
-    margin-right: 9px;
+    display: flex;
+    align-items: center;
+  }
+  .repair::before,
+  .check-status::before {
+    display: none;
   }
 
   .title {
@@ -192,6 +194,44 @@ li {
   .title__buttons {
     display: none;
   }
+}
+
+.burger-menu::before {
+  content: url("/assets/images/burger.svg");
+}
+
+.logo::before {
+  content: url("/assets/images/logo.svg");
+}
+
+.repair::before {
+  content: url("/assets/images/repair.svg");
+}
+
+.check-status::before {
+  content: url("/assets/images/checkstatus.svg");
+}
+
+.phone::before {
+  content: url("/assets/images/call.svg");
+}
+
+.chat::before {
+  content: url("/assets/images/chat.svg");
+}
+
+.profile::before {
+  content: url("/assets/images/profile.svg");
+}
+
+.check-status__submit::after {
+  content: url("/assets/images/checkstatus.svg");
+  padding-left: 8px;
+}
+
+.repair__submit::after {
+  content: url("/assets/images/repair.svg");
+  padding-left: 8px;
 }
 
 /*********Slide-menu**********/
@@ -322,6 +362,13 @@ li {
   }
   .main-content__block {
     margin-right: 48px;
+  }
+}
+
+@media (max-width: 767.5px) {
+  .main-image {
+    width: 100%;
+    max-width: 600px;
   }
 }
 
