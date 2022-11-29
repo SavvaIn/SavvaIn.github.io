@@ -39,7 +39,7 @@ a {
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  
   max-width: 320px;
   min-height: 100%;
   background: #ffffff;
@@ -194,6 +194,8 @@ a {
 }
 
 .aside-footer__email {
+  display: block;
+  color: rgba(27, 28, 33, 1);
   font-family: "TTLakes-Medium";
   height: 32px;
   margin-top: 10px;
@@ -201,4 +203,5 @@ a {
 
 .aside-footer__number {
   font-family: "TTLakes-Bold";
+  color: rgba(27, 28, 33, 1);
 }
