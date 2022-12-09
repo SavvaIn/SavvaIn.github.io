@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "TTLakes-Regular";
+  src: url(/assets/fonts/TTLakes-Regular.woff);
+}
+@font-face {
+  font-family: "TTLakes-Medium";
+  src: url(/assets/fonts/TTLakes-Medium.woff);
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body,
+html {
+  background-color: #f8f8f8;
+  font-family: "TTLakes";
+  height: 100%;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  background: none;
+}
+
+a {
+  color: #7e7e82;
+}
+
+.brands__title {
+  font-family: "TTLakes-Regular";
+  border-top: 1px solid rgba(217, 255, 245, 1);
+  color: #7e7e82;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 16px;
+  line-height: 24px;
+}
+
+.brands__container {
+  margin-left: 16px;
+  overflow: hidden;
+}
+
+.item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 240px;
+  background-color: rgba(255, 255, 255, 1);
+  margin-top: 24px;
+}
+
+.item__logo {
+  margin-left: 16px;
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  background-color: #ff3e79;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item__button {
+  display: block;
+  border: 2px solid #ff3e79;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 16px;
+}
+.item__button::before {
+  content: "";
+  display: block;
+  position: relative;
+  border-right: 2px solid #ff3e79;
+  border-bottom: 2px solid #ff3e79;
+  width: 12px;
+  height: 12px;
+  left: 10px;
+  transform: rotate(-45deg);
+}
+
+.swiper-pagination {
+  margin-top: 16px;
+  position: relative;
+}
+
+.swiper-pagination-bullet {
+  background-color: #67686a;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #b5b6bc;
+}
+
+.expand-show {
+  display: none;
+}
+
+.expand__text {
+  font-family: "TTLakes-Medium";
+  margin-left: 5px;
+}
+
+@media (min-width: 768px) {
+  .brands {
+    height: 380px;
+  }
+  .brands__container {
+    max-width: 1056px;
+    height: 192px;
+    overflow: hidden;
+    margin-right: 16px;
+  }
+  .swiper-wrapper {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .item--stopper {
+    width: 240px;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .expand-show {
+    display: flex;
+    align-items: center;
+    font-family: "TTLakes Medium";
+    margin-top: 24px;
+    margin-left: 16px;
+  }
+}
+@media (min-width: 990px) {
+  .brands {
+    height: 278px;
+  }
+}
