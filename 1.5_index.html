@@ -13,7 +13,7 @@
   <body>
     <section class="brands">
       <p class="brands__title">Ремонт техники различных брендов</p>
-      <section class="brands__container">
+      <section class="brands__container hide">
         <ul class="swiper-wrapper">
           <li class="item">
             <div class="item__logo" aria-label="Lenovo">
@@ -121,10 +121,12 @@
         </ul>
         <div class="swiper-pagination"></div>
       </section>
-      <button type="button" class="expand-show" aria-label="Показать все">
-        <img src="/assets/images/expand.svg" alt="Arrow" />
-        <span class="expand__text">Показать все</span>
-      </button>
+      <div class="expand-button">
+        <button class="expand-button__expand-show">
+          <span class="expand-button__arrow"></span>
+          <span class="expand-button__text expand-open">Показать все</span>
+        </button>
+      </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="/assets/scripts/main.js"></script>
