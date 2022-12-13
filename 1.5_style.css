@@ -47,7 +47,6 @@ a {
 
 .brands__container {
   margin-left: 16px;
-  overflow: hidden;
 }
 
 .item {
@@ -64,16 +63,6 @@ a {
   margin-left: 16px;
 }
 
-.button {
-  width: 40px;
-  height: 40px;
-  background-color: #ff3e79;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .item__button {
   display: block;
   border: 2px solid #ff3e79;
@@ -82,6 +71,7 @@ a {
   height: 40px;
   margin: 16px;
 }
+
 .item__button::before {
   content: "";
   display: block;
@@ -107,23 +97,44 @@ a {
   background-color: #b5b6bc;
 }
 
-.expand-show {
+.hide {
+  overflow: hidden;
+}
+
+.expand-button {
   display: none;
 }
 
-.expand__text {
+.expand-button__expand-show {
+  display: flex;
+  align-items: center;
+}
+
+.expand-button__arrow::before {
+  content: url("/assets/images/expand.svg");
+}
+.arrow-rotate {
+  transform: rotate(180deg);
+}
+
+.expand-button__text {
   font-family: "TTLakes-Medium";
-  margin-left: 5px;
+}
+
+@media (max-width: 767.5px) {
+  .brands__container {
+    overflow: hidden;
+  }
 }
 
 @media (min-width: 768px) {
   .brands {
-    height: 380px;
+    height: 190px;
   }
   .brands__container {
     max-width: 1056px;
-    height: 192px;
-    overflow: hidden;
+    height: 100%;
+
     margin-right: 16px;
   }
   .swiper-wrapper {
@@ -138,16 +149,19 @@ a {
     display: none;
   }
 
-  .expand-show {
+  .expand-button {
     display: flex;
     align-items: center;
     font-family: "TTLakes Medium";
     margin-top: 24px;
     margin-left: 16px;
   }
+  .expand-close {
+    margin-top: 200px;
+  }
 }
-@media (min-width: 990px) {
-  .brands {
-    height: 278px;
+@media (min-width: 992px) {
+  .expand-close {
+    margin-top: 100px;
   }
 }
