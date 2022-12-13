@@ -1,6 +1,5 @@
-let container = document.querySelector(".brands__container");
+const container = document.querySelector(".brands__container");
 let Slider;
-let openned = false;
 
 function createSlider() {
   if (window.innerWidth < 768) {
@@ -40,28 +39,24 @@ function createSlider() {
   }
 }
 
-createSlider();
+const button = document.querySelector(".expand-button__expand-show");
+const expandShow = document.querySelector(".expand-show");
+const wrapper = document.querySelector(".brands__container");
+const arrow = document.querySelector(".expand-button__arrow");
+const text = document.querySelector(".expand-button__text");
 
-window.addEventListener("resize", () => {
-  createSlider();
-  if (window.innerWidth < 768) {
-    openned = false;
-    container.style.height = "100%";
-    expand_show.querySelector("span").textContent = "Показать все";
-    expand_show.querySelector("img").style.transform = "rotate(0deg)";
+button.addEventListener("click", () => {
+  wrapper.classList.toggle("hide");
+  button.classList.toggle("expand-close");
+  arrow.classList.toggle("arrow-rotate");
+  if (wrapper.classList.contains("hide")) {
+    text.textContent = "Показать все";
+  } else {
+    text.textContent = "Скрыть";
   }
 });
 
-let expand_show = document.querySelector(".expand-show");
-expand_show.addEventListener("click", () => {
-  if (openned) {
-    container.style.height = "192px";
-    expand_show.querySelector("span").textContent = "Показать все";
-    expand_show.querySelector("img").style.transform = "rotate(0deg)";
-  } else {
-    container.style.height = "100%";
-    expand_show.querySelector("span").textContent = "Скрыть";
-    expand_show.querySelector("img").style.transform = "rotate(180deg)";
-  }
-  openned = !openned;
+createSlider();
+window.addEventListener("resize", () => {
+  createSlider();
 });
