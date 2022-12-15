@@ -42,7 +42,7 @@ function createSlider() {
 const button = document.querySelector(".expand-button__expand-show");
 const expandShow = document.querySelector(".expand-show");
 const wrapper = document.querySelector(".brands__container");
-const arrow = document.querySelector(".expand-button__arrow");
+const arrow = document.querySelector(".expand-button__expand-show");
 const text = document.querySelector(".expand-button__text");
 
 button.addEventListener("click", () => {
