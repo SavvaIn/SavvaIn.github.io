@@ -110,10 +110,10 @@ a {
   align-items: center;
 }
 
-.expand-button__arrow::before {
+.expand-button__expand-show::before {
   content: url("/assets/images/expand.svg");
 }
-.arrow-rotate {
+.arrow-rotate::before  {
   transform: rotate(180deg);
 }
 
